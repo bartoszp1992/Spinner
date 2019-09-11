@@ -74,7 +74,9 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 //experimental 1us delay
 void delayUs(uint32_t delay) {
 
-	volatile uint32_t delayUs = delay*0.36;
+	if(delay > 200000) delay = 0;
+
+	volatile uint32_t delayUs = delay*0.32;
 
 	for (uint32_t i = 0; i < delayUs; i++)
 		;

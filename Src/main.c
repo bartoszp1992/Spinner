@@ -43,6 +43,9 @@
  * 			sync interrupt time changed for 1 sec
  * 			added busy flag(but it isnt in use).
  * 			rpt is set to 0 after wakeup.
+
+ * v0.57
+ * 			fixed freeze bug on the sun.
  *
  *todo:
  *better us counter
