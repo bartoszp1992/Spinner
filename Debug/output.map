@@ -2917,7 +2917,7 @@ LOAD /home/bartosz/program/sw4stm32/plugins/fr.ac6.mcu.externaltools.arm-none.li
                 0x0000000008000000                g_pfnVectors
                 0x00000000080000c0                . = ALIGN (0x4)
 
-.text           0x00000000080000c0     0x3bfc
+.text           0x00000000080000c0     0x3bf8
                 0x00000000080000c0                . = ALIGN (0x4)
  *(.text)
  .text          0x00000000080000c0       0x48 /home/bartosz/program/sw4stm32/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
@@ -3105,183 +3105,183 @@ LOAD /home/bartosz/program/sw4stm32/plugins/fr.ac6.mcu.externaltools.arm-none.li
  .text.main     0x0000000008002f80      0x47c Src/main.o
                 0x0000000008002f80                main
  .text.matrixDisplayInit
-                0x00000000080033fc       0x4c Src/matrixDisplay.o
+                0x00000000080033fc       0x48 Src/matrixDisplay.o
                 0x00000000080033fc                matrixDisplayInit
  .text.HAL_GPIO_EXTI_Callback
-                0x0000000008003448       0x74 Src/matrixDisplay.o
-                0x0000000008003448                HAL_GPIO_EXTI_Callback
+                0x0000000008003444       0x74 Src/matrixDisplay.o
+                0x0000000008003444                HAL_GPIO_EXTI_Callback
  .text.HAL_TIM_PeriodElapsedCallback
-                0x00000000080034bc       0x94 Src/matrixDisplay.o
-                0x00000000080034bc                HAL_TIM_PeriodElapsedCallback
- .text.delayUs  0x0000000008003550       0x3c Src/matrixDisplay.o
-                0x0000000008003550                delayUs
+                0x00000000080034b8       0x94 Src/matrixDisplay.o
+                0x00000000080034b8                HAL_TIM_PeriodElapsedCallback
+ .text.delayUs  0x000000000800354c       0x3c Src/matrixDisplay.o
+                0x000000000800354c                delayUs
  .text.matrixWriteTime
-                0x000000000800358c       0x98 Src/matrixDisplay.o
-                0x000000000800358c                matrixWriteTime
+                0x0000000008003588       0x98 Src/matrixDisplay.o
+                0x0000000008003588                matrixWriteTime
  .text.matrixWriteMarkers
-                0x0000000008003624       0x2c Src/matrixDisplay.o
-                0x0000000008003624                matrixWriteMarkers
- .text.turnOn   0x0000000008003650       0x80 Src/matrixDisplay.o
-                0x0000000008003650                turnOn
+                0x0000000008003620       0x2c Src/matrixDisplay.o
+                0x0000000008003620                matrixWriteMarkers
+ .text.turnOn   0x000000000800364c       0x80 Src/matrixDisplay.o
+                0x000000000800364c                turnOn
  .text.matrixDisplay
-                0x00000000080036d0      0x124 Src/matrixDisplay.o
-                0x00000000080036d0                matrixDisplay
- .text.turnOff  0x00000000080037f4       0x80 Src/matrixDisplay.o
-                0x00000000080037f4                turnOff
+                0x00000000080036cc      0x124 Src/matrixDisplay.o
+                0x00000000080036cc                matrixDisplay
+ .text.turnOff  0x00000000080037f0       0x80 Src/matrixDisplay.o
+                0x00000000080037f0                turnOff
  .text.matrixSplash
-                0x0000000008003874       0x94 Src/matrixDisplay.o
-                0x0000000008003874                matrixSplash
+                0x0000000008003870       0x94 Src/matrixDisplay.o
+                0x0000000008003870                matrixSplash
  .text.toggleAll
-                0x0000000008003908       0x4c Src/matrixDisplay.o
-                0x0000000008003908                toggleAll
+                0x0000000008003904       0x4c Src/matrixDisplay.o
+                0x0000000008003904                toggleAll
  .text.showBinary
-                0x0000000008003954       0xd8 Src/matrixDisplay.o
-                0x0000000008003954                showBinary
- .text.getTime  0x0000000008003a2c       0x50 Src/rtc.o
-                0x0000000008003a2c                getTime
- .text.setTime  0x0000000008003a7c       0x48 Src/rtc.o
-                0x0000000008003a7c                setTime
- .text.ccw      0x0000000008003ac4       0x2c Src/rtc.o
-                0x0000000008003ac4                ccw
+                0x0000000008003950       0xd8 Src/matrixDisplay.o
+                0x0000000008003950                showBinary
+ .text.getTime  0x0000000008003a28       0x50 Src/rtc.o
+                0x0000000008003a28                getTime
+ .text.setTime  0x0000000008003a78       0x48 Src/rtc.o
+                0x0000000008003a78                setTime
+ .text.ccw      0x0000000008003ac0       0x2c Src/rtc.o
+                0x0000000008003ac0                ccw
  .text.HAL_MspInit
-                0x0000000008003af0       0x1c Src/stm32l0xx_hal_msp.o
-                0x0000000008003af0                HAL_MspInit
+                0x0000000008003aec       0x1c Src/stm32l0xx_hal_msp.o
+                0x0000000008003aec                HAL_MspInit
  .text.HAL_RTC_MspInit
-                0x0000000008003b0c       0x20 Src/stm32l0xx_hal_msp.o
-                0x0000000008003b0c                HAL_RTC_MspInit
+                0x0000000008003b08       0x20 Src/stm32l0xx_hal_msp.o
+                0x0000000008003b08                HAL_RTC_MspInit
  .text.HAL_TIM_Base_MspInit
-                0x0000000008003b2c       0x30 Src/stm32l0xx_hal_msp.o
-                0x0000000008003b2c                HAL_TIM_Base_MspInit
+                0x0000000008003b28       0x30 Src/stm32l0xx_hal_msp.o
+                0x0000000008003b28                HAL_TIM_Base_MspInit
  .text.NMI_Handler
-                0x0000000008003b5c        0x2 Src/stm32l0xx_it.o
-                0x0000000008003b5c                NMI_Handler
+                0x0000000008003b58        0x2 Src/stm32l0xx_it.o
+                0x0000000008003b58                NMI_Handler
  .text.HardFault_Handler
-                0x0000000008003b5e        0x2 Src/stm32l0xx_it.o
-                0x0000000008003b5e                HardFault_Handler
+                0x0000000008003b5a        0x2 Src/stm32l0xx_it.o
+                0x0000000008003b5a                HardFault_Handler
  .text.SVC_Handler
-                0x0000000008003b60        0x2 Src/stm32l0xx_it.o
-                0x0000000008003b60                SVC_Handler
+                0x0000000008003b5c        0x2 Src/stm32l0xx_it.o
+                0x0000000008003b5c                SVC_Handler
  .text.PendSV_Handler
-                0x0000000008003b62        0x2 Src/stm32l0xx_it.o
-                0x0000000008003b62                PendSV_Handler
+                0x0000000008003b5e        0x2 Src/stm32l0xx_it.o
+                0x0000000008003b5e                PendSV_Handler
  .text.SysTick_Handler
-                0x0000000008003b64        0x8 Src/stm32l0xx_it.o
-                0x0000000008003b64                SysTick_Handler
+                0x0000000008003b60        0x8 Src/stm32l0xx_it.o
+                0x0000000008003b60                SysTick_Handler
  .text.EXTI0_1_IRQHandler
-                0x0000000008003b6c        0xa Src/stm32l0xx_it.o
-                0x0000000008003b6c                EXTI0_1_IRQHandler
+                0x0000000008003b68        0xa Src/stm32l0xx_it.o
+                0x0000000008003b68                EXTI0_1_IRQHandler
  .text.EXTI2_3_IRQHandler
-                0x0000000008003b76        0xa Src/stm32l0xx_it.o
-                0x0000000008003b76                EXTI2_3_IRQHandler
+                0x0000000008003b72        0xa Src/stm32l0xx_it.o
+                0x0000000008003b72                EXTI2_3_IRQHandler
  .text.EXTI4_15_IRQHandler
-                0x0000000008003b80        0xa Src/stm32l0xx_it.o
-                0x0000000008003b80                EXTI4_15_IRQHandler
- *fill*         0x0000000008003b8a        0x2 
+                0x0000000008003b7c        0xa Src/stm32l0xx_it.o
+                0x0000000008003b7c                EXTI4_15_IRQHandler
+ *fill*         0x0000000008003b86        0x2 
  .text.TIM2_IRQHandler
-                0x0000000008003b8c       0x10 Src/stm32l0xx_it.o
-                0x0000000008003b8c                TIM2_IRQHandler
+                0x0000000008003b88       0x10 Src/stm32l0xx_it.o
+                0x0000000008003b88                TIM2_IRQHandler
  .text.SystemInit
-                0x0000000008003b9c       0x5c Src/system_stm32l0xx.o
-                0x0000000008003b9c                SystemInit
+                0x0000000008003b98       0x5c Src/system_stm32l0xx.o
+                0x0000000008003b98                SystemInit
  .text.Reset_Handler
-                0x0000000008003bf8       0x50 startup/startup_stm32l041xx.o
-                0x0000000008003bf8                Reset_Handler
+                0x0000000008003bf4       0x50 startup/startup_stm32l041xx.o
+                0x0000000008003bf4                Reset_Handler
  .text.Default_Handler
-                0x0000000008003c48        0x2 startup/startup_stm32l041xx.o
-                0x0000000008003c48                ADC1_COMP_IRQHandler
-                0x0000000008003c48                PVD_IRQHandler
-                0x0000000008003c48                I2C1_IRQHandler
-                0x0000000008003c48                SPI1_IRQHandler
-                0x0000000008003c48                AES_LPUART1_IRQHandler
-                0x0000000008003c48                RTC_IRQHandler
-                0x0000000008003c48                DMA1_Channel4_5_6_7_IRQHandler
-                0x0000000008003c48                RCC_IRQHandler
-                0x0000000008003c48                DMA1_Channel1_IRQHandler
-                0x0000000008003c48                Default_Handler
-                0x0000000008003c48                TIM22_IRQHandler
-                0x0000000008003c48                TIM21_IRQHandler
-                0x0000000008003c48                WWDG_IRQHandler
-                0x0000000008003c48                DMA1_Channel2_3_IRQHandler
-                0x0000000008003c48                USART2_IRQHandler
-                0x0000000008003c48                FLASH_IRQHandler
-                0x0000000008003c48                LPTIM1_IRQHandler
- *fill*         0x0000000008003c4a        0x2 
+                0x0000000008003c44        0x2 startup/startup_stm32l041xx.o
+                0x0000000008003c44                ADC1_COMP_IRQHandler
+                0x0000000008003c44                PVD_IRQHandler
+                0x0000000008003c44                I2C1_IRQHandler
+                0x0000000008003c44                SPI1_IRQHandler
+                0x0000000008003c44                AES_LPUART1_IRQHandler
+                0x0000000008003c44                RTC_IRQHandler
+                0x0000000008003c44                DMA1_Channel4_5_6_7_IRQHandler
+                0x0000000008003c44                RCC_IRQHandler
+                0x0000000008003c44                DMA1_Channel1_IRQHandler
+                0x0000000008003c44                Default_Handler
+                0x0000000008003c44                TIM22_IRQHandler
+                0x0000000008003c44                TIM21_IRQHandler
+                0x0000000008003c44                WWDG_IRQHandler
+                0x0000000008003c44                DMA1_Channel2_3_IRQHandler
+                0x0000000008003c44                USART2_IRQHandler
+                0x0000000008003c44                FLASH_IRQHandler
+                0x0000000008003c44                LPTIM1_IRQHandler
+ *fill*         0x0000000008003c46        0x2 
  .text.__libc_init_array
-                0x0000000008003c4c       0x48 /home/bartosz/program/sw4stm32/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libc_nano.a(lib_a-init.o)
-                0x0000000008003c4c                __libc_init_array
- .text.memset   0x0000000008003c94       0x10 /home/bartosz/program/sw4stm32/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libc_nano.a(lib_a-memset.o)
-                0x0000000008003c94                memset
+                0x0000000008003c48       0x48 /home/bartosz/program/sw4stm32/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libc_nano.a(lib_a-init.o)
+                0x0000000008003c48                __libc_init_array
+ .text.memset   0x0000000008003c90       0x10 /home/bartosz/program/sw4stm32/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libc_nano.a(lib_a-memset.o)
+                0x0000000008003c90                memset
  *(.glue_7)
- .glue_7        0x0000000008003ca4        0x0 linker stubs
+ .glue_7        0x0000000008003ca0        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0000000008003ca4        0x0 linker stubs
+ .glue_7t       0x0000000008003ca0        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x0000000008003ca4        0x0 /home/bartosz/program/sw4stm32/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
+ .eh_frame      0x0000000008003ca0        0x0 /home/bartosz/program/sw4stm32/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
  *(.init)
- .init          0x0000000008003ca4        0x4 /home/bartosz/program/sw4stm32/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crti.o
-                0x0000000008003ca4                _init
- .init          0x0000000008003ca8        0x8 /home/bartosz/program/sw4stm32/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtn.o
+ .init          0x0000000008003ca0        0x4 /home/bartosz/program/sw4stm32/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crti.o
+                0x0000000008003ca0                _init
+ .init          0x0000000008003ca4        0x8 /home/bartosz/program/sw4stm32/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtn.o
  *(.fini)
- .fini          0x0000000008003cb0        0x4 /home/bartosz/program/sw4stm32/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crti.o
-                0x0000000008003cb0                _fini
- .fini          0x0000000008003cb4        0x8 /home/bartosz/program/sw4stm32/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtn.o
-                0x0000000008003cbc                . = ALIGN (0x4)
-                0x0000000008003cbc                _etext = .
+ .fini          0x0000000008003cac        0x4 /home/bartosz/program/sw4stm32/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crti.o
+                0x0000000008003cac                _fini
+ .fini          0x0000000008003cb0        0x8 /home/bartosz/program/sw4stm32/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtn.o
+                0x0000000008003cb8                . = ALIGN (0x4)
+                0x0000000008003cb8                _etext = .
 
-.vfp11_veneer   0x0000000008003cbc        0x0
- .vfp11_veneer  0x0000000008003cbc        0x0 linker stubs
+.vfp11_veneer   0x0000000008003cb8        0x0
+ .vfp11_veneer  0x0000000008003cb8        0x0 linker stubs
 
-.v4_bx          0x0000000008003cbc        0x0
- .v4_bx         0x0000000008003cbc        0x0 linker stubs
+.v4_bx          0x0000000008003cb8        0x0
+ .v4_bx         0x0000000008003cb8        0x0 linker stubs
 
-.iplt           0x0000000008003cbc        0x0
- .iplt          0x0000000008003cbc        0x0 /home/bartosz/program/sw4stm32/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
+.iplt           0x0000000008003cb8        0x0
+ .iplt          0x0000000008003cb8        0x0 /home/bartosz/program/sw4stm32/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
 
-.rodata         0x0000000008003cbc      0x104
-                0x0000000008003cbc                . = ALIGN (0x4)
+.rodata         0x0000000008003cb8      0x104
+                0x0000000008003cb8                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x0000000008003cbc       0x60 Src/matrixDisplay.o
- .rodata        0x0000000008003d1c       0x24 Src/system_stm32l0xx.o
-                0x0000000008003d1c                PLLMulTable
-                0x0000000008003d28                AHBPrescTable
-                0x0000000008003d38                APBPrescTable
- .rodata        0x0000000008003d40       0x40 /home/bartosz/program/sw4stm32/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(divdf3.o)
- .rodata        0x0000000008003d80       0x40 /home/bartosz/program/sw4stm32/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(muldf3.o)
+ .rodata        0x0000000008003cb8       0x60 Src/matrixDisplay.o
+ .rodata        0x0000000008003d18       0x24 Src/system_stm32l0xx.o
+                0x0000000008003d18                PLLMulTable
+                0x0000000008003d24                AHBPrescTable
+                0x0000000008003d34                APBPrescTable
+ .rodata        0x0000000008003d3c       0x40 /home/bartosz/program/sw4stm32/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(divdf3.o)
+ .rodata        0x0000000008003d7c       0x40 /home/bartosz/program/sw4stm32/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(muldf3.o)
  *(.rodata*)
-                0x0000000008003dc0                . = ALIGN (0x4)
+                0x0000000008003dbc                . = ALIGN (0x4)
 
-.rel.dyn        0x0000000008003dc0        0x0
- .rel.iplt      0x0000000008003dc0        0x0 /home/bartosz/program/sw4stm32/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
+.rel.dyn        0x0000000008003dbc        0x0
+ .rel.iplt      0x0000000008003dbc        0x0 /home/bartosz/program/sw4stm32/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x0000000008003dc0        0x0
-                0x0000000008003dc0                __exidx_start = .
+.ARM            0x0000000008003dbc        0x0
+                0x0000000008003dbc                __exidx_start = .
  *(.ARM.exidx*)
-                0x0000000008003dc0                __exidx_end = .
+                0x0000000008003dbc                __exidx_end = .
 
-.preinit_array  0x0000000008003dc0        0x0
-                0x0000000008003dc0                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0000000008003dbc        0x0
+                0x0000000008003dbc                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x0000000008003dc0                PROVIDE (__preinit_array_end = .)
+                0x0000000008003dbc                PROVIDE (__preinit_array_end = .)
 
-.init_array     0x0000000008003dc0        0x4
-                0x0000000008003dc0                PROVIDE (__init_array_start = .)
+.init_array     0x0000000008003dbc        0x4
+                0x0000000008003dbc                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x0000000008003dc0        0x4 /home/bartosz/program/sw4stm32/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
-                0x0000000008003dc4                PROVIDE (__init_array_end = .)
+ .init_array    0x0000000008003dbc        0x4 /home/bartosz/program/sw4stm32/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
+                0x0000000008003dc0                PROVIDE (__init_array_end = .)
 
-.fini_array     0x0000000008003dc4        0x4
+.fini_array     0x0000000008003dc0        0x4
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0000000008003dc4        0x4 /home/bartosz/program/sw4stm32/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
+ .fini_array    0x0000000008003dc0        0x4 /home/bartosz/program/sw4stm32/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x0000000008003dc8                _sidata = LOADADDR (.data)
+                0x0000000008003dc4                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000        0x4 load address 0x0000000008003dc8
+.data           0x0000000020000000        0x4 load address 0x0000000008003dc4
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -3291,11 +3291,11 @@ LOAD /home/bartosz/program/sw4stm32/plugins/fr.ac6.mcu.externaltools.arm-none.li
                 0x0000000020000004                . = ALIGN (0x4)
                 0x0000000020000004                _edata = .
 
-.igot.plt       0x0000000020000004        0x0 load address 0x0000000008003dcc
+.igot.plt       0x0000000020000004        0x0 load address 0x0000000008003dc8
  .igot.plt      0x0000000020000004        0x0 /home/bartosz/program/sw4stm32/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
                 0x0000000020000004                . = ALIGN (0x4)
 
-.bss            0x0000000020000004      0x29c load address 0x0000000008003dcc
+.bss            0x0000000020000004      0x29c load address 0x0000000008003dc8
                 0x0000000020000004                _sbss = .
                 0x0000000020000004                __bss_start__ = _sbss
  *(.bss)
@@ -3335,7 +3335,7 @@ LOAD /home/bartosz/program/sw4stm32/plugins/fr.ac6.mcu.externaltools.arm-none.li
                 0x00000000200002a0                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x00000000200002a0      0x600 load address 0x0000000008003dcc
+                0x00000000200002a0      0x600 load address 0x0000000008003dc8
                 0x00000000200002a0                . = ALIGN (0x8)
                 0x00000000200002a0                PROVIDE (end = .)
                 [!provide]                        PROVIDE (_end = .)

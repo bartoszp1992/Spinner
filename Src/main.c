@@ -47,6 +47,9 @@
  * v0.57
  * 			fixed freeze bug on the sun.
  *
+ * v0.58
+ * 			shorted working time.
+ *
  *todo:
  *better us counter
  *short pointer at 00:00
@@ -338,7 +341,7 @@ int main(void)
 
 		if (mode == 1) {
 			OPTO_ON; //turn on interrupter ant vent
-			if (rpt > minRpt) { //if rpt are enough, run display
+			if (rpt >= minRpt) { //if rpt are enough, run display
 
 				getTime();
 				ccw();
