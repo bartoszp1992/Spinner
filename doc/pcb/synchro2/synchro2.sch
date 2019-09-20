@@ -165,34 +165,8 @@ Wire Wire Line
 Wire Wire Line
 	6200 2650 6200 2850
 Connection ~ 6100 2650
-$Comp
-L Device:R R3
-U 1 1 5D5EC6C6
-P 7450 3050
-F 0 "R3" V 7243 3050 50  0000 C CNN
-F 1 "22R" V 7334 3050 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 7380 3050 50  0001 C CNN
-F 3 "~" H 7450 3050 50  0001 C CNN
-	1    7450 3050
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	6600 3050 6650 3050
-$Comp
-L power:GND #PWR0105
-U 1 1 5D5EDEE6
-P 8550 3500
-F 0 "#PWR0105" H 8550 3250 50  0001 C CNN
-F 1 "GND" H 8400 3450 50  0000 C CNN
-F 2 "" H 8550 3500 50  0001 C CNN
-F 3 "" H 8550 3500 50  0001 C CNN
-	1    8550 3500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8550 3450 8550 3500
-Wire Wire Line
-	7800 3650 7800 3150
 $Comp
 L Switch:SW_SPST SW2
 U 1 1 5D5F190F
@@ -475,14 +449,6 @@ Wire Wire Line
 	6850 4150 6850 5150
 Wire Wire Line
 	6850 5150 7500 5150
-Wire Wire Line
-	7950 3450 8550 3450
-Wire Wire Line
-	9200 3650 9200 3050
-Wire Wire Line
-	9200 3050 8550 3050
-Wire Wire Line
-	7800 3650 9200 3650
 $Comp
 L Device:Battery_Cell BT1
 U 1 1 5D63567B
@@ -529,9 +495,6 @@ Wire Wire Line
 	5250 2100 6750 2100
 Wire Wire Line
 	6750 2100 6750 3150
-Connection ~ 6750 3150
-Wire Wire Line
-	6750 3150 7800 3150
 Text GLabel 5250 3200 0    50   Input ~ 0
 GND
 $Comp
@@ -671,20 +634,20 @@ L Transistor_FET:BS170F Q1
 U 1 1 5D6E790C
 P 10000 4050
 F 0 "Q1" H 10206 4096 50  0000 L CNN
-F 1 "BS170F" H 10206 4005 50  0000 L CNN
+F 1 "IRLML0030TR" H 10206 4005 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 10200 3975 50  0001 L CIN
 F 3 "http://www.diodes.com/assets/Datasheets/BS170F.pdf" H 10000 4050 50  0001 L CNN
 	1    10000 4050
 	1    0    0    -1  
 $EndComp
-Text GLabel 9600 4050 0    50   Input ~ 0
+Text GLabel 9050 4050 0    50   Input ~ 0
 MOTOR
 $Comp
 L Device:R R11
 U 1 1 5D6EACFF
 P 9750 4350
 F 0 "R11" H 9820 4396 50  0000 L CNN
-F 1 "1k" H 9820 4305 50  0000 L CNN
+F 1 "15k" H 9820 4305 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 9680 4350 50  0001 C CNN
 F 3 "~" H 9750 4350 50  0001 C CNN
 	1    9750 4350
@@ -702,10 +665,7 @@ F 3 "" H 9750 4500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9600 4050 9750 4050
-Wire Wire Line
 	9750 4200 9750 4050
-Connection ~ 9750 4050
 Wire Wire Line
 	9750 4050 9800 4050
 Wire Wire Line
@@ -740,14 +700,10 @@ MOTOR
 Wire Wire Line
 	6650 3050 7150 3050
 Wire Wire Line
-	7600 3050 7950 3050
-Wire Wire Line
 	7250 2650 7150 2650
 Wire Wire Line
 	7150 2650 7150 3050
 Connection ~ 7150 3050
-Wire Wire Line
-	7150 3050 7300 3050
 NoConn ~ 6600 3250
 Wire Wire Line
 	1700 2600 2000 2600
@@ -770,19 +726,40 @@ Connection ~ 2100 2300
 Wire Wire Line
 	2100 2300 2550 2300
 $Comp
-L Isolator:SFH617A-1 U3
-U 1 1 5D6EFA55
-P 8250 3150
-F 0 "U3" H 8250 3475 50  0000 C CNN
-F 1 "KTIR0711S" H 8250 3384 50  0000 C CNN
-F 2 "Package_DIP:DIP-4_W7.62mm" H 8050 2950 50  0001 L CIN
-F 3 "http://www.vishay.com/docs/83740/sfh617a.pdf" H 8250 3150 50  0001 L CNN
-	1    8250 3150
+L Sensor_Magnetic:A1104LLHL U4
+U 1 1 5D84C99C
+P 8300 3450
+F 0 "U4" H 8070 3496 50  0000 R CNN
+F 1 "SS311PT" H 8070 3405 50  0000 R CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 8300 3100 50  0001 L CIN
+F 3 "http://www.allegromicro.com/en/Products/Part_Numbers/1101/1101.pdf" H 8300 4100 50  0001 C CNN
+	1    8300 3450
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:R R3
+U 1 1 5D86D800
+P 9500 4050
+F 0 "R3" V 9293 4050 50  0000 C CNN
+F 1 "470R" V 9384 4050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 9430 4050 50  0001 C CNN
+F 3 "~" H 9500 4050 50  0001 C CNN
+	1    9500 4050
+	0    1    1    0   
+$EndComp
 Wire Wire Line
-	7950 3250 7950 3450
+	9650 4050 9750 4050
+Connection ~ 9750 4050
 Wire Wire Line
-	8550 3250 8550 3450
-Connection ~ 8550 3450
+	9050 4050 9350 4050
+Wire Wire Line
+	8200 3850 8200 4250
+Connection ~ 8200 4250
+Wire Wire Line
+	7150 3050 8200 3050
+Wire Wire Line
+	8600 3450 8600 2100
+Wire Wire Line
+	8600 2100 6750 2100
+Connection ~ 6750 2100
 $EndSCHEMATC

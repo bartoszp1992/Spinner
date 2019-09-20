@@ -61,7 +61,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 
 		//counting running time(1 - display mode)
 		if (workingCounter < workingTime) {
-			if(forceMode == 0)workingCounter++; //increment working counter only when force is selected.
+			if(forceMode == 0)workingCounter++;
+			//^increment working counter only in ondemand mode
 		} else {
 			mode = 0;
 			//^if counts to working time, turns on mode 0 - stop mode.
@@ -142,10 +143,10 @@ void matrixDisplay() {
 					turnOn(j);
 
 				} //end if
-				if(startFlag == 1){//if EXTI occurs
-					columnTime--;//decrease columnTime- means, that columnTime is too long.
-					break;//and exit loop. Will be started in next run.
-				}
+//				if(startFlag == 1){//if EXTI occurs
+//					columnTime--;//decrease columnTime- means, that columnTime is too long.
+//					break;//and exit loop. Will be started in next run.
+//				}
 				delayUs(columnTime);
 
 			} //end for
@@ -155,8 +156,10 @@ void matrixDisplay() {
 
 		} //end for
 		busyFlag = 0;
-	}else{ //if startFlag isn't on instantly after display cycle means that column time are too short.
+		columnTime--;
+	}else{
 		columnTime++;
+		//^if startFlag isn't on instantly after display cycle means that column time are too short.
 	}
 } //end function
 
