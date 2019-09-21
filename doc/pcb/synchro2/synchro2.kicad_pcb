@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 25)
+    (drawings 26)
     (tracks 177)
     (zones 0)
     (modules 37)
@@ -11,7 +11,7 @@
 
   (page A4)
   (layers
-    (0 F.Cu signal)
+    (0 F.Cu signal hide)
     (31 B.Cu signal)
     (32 B.Adhes user hide)
     (33 F.Adhes user hide)
@@ -23,8 +23,8 @@
     (39 F.Mask user)
     (40 Dwgs.User user hide)
     (41 Cmts.User user hide)
-    (42 Eco1.User user hide)
-    (43 Eco2.User user hide)
+    (42 Eco1.User user)
+    (43 Eco2.User user)
     (44 Edge.Cuts user)
     (45 Margin user hide)
     (46 B.CrtYd user hide)
@@ -34,7 +34,7 @@
   )
 
   (setup
-    (last_trace_width 0.4)
+    (last_trace_width 0.25)
     (user_trace_width 0.4)
     (trace_clearance 0.2)
     (zone_clearance 0.508)
@@ -1352,7 +1352,7 @@
     (tags capacitor)
     (path /5D6E34A0)
     (attr smd)
-    (fp_text reference C2 (at -0.1 -1.55) (layer F.SilkS)
+    (fp_text reference C2 (at -0.1 -1.55) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value 100n (at 0 1.43) (layer F.Fab)
@@ -1607,6 +1607,7 @@
     )
   )
 
+  (gr_circle (center 219.1 116.3) (end 238.9 116.3) (layer F.SilkS) (width 0.3))
   (gr_circle (center 219.1 116.3) (end 219.1 96.3) (layer Edge.Cuts) (width 0.05) (tstamp 5D719B68))
   (dimension 45.079485 (width 0.12) (layer B.SilkS)
     (gr_text "45,079 mm" (at 233.795013 86.616073 -26.33768817) (layer B.SilkS)

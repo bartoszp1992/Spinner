@@ -23,6 +23,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
 
 		rotatesCounter++; //add pulse
 		startFlag = 1; //start display cycle
+
 	}
 
 	if (GPIO_Pin == GPIO_PIN_3) { //wake button
@@ -143,10 +144,10 @@ void matrixDisplay() {
 					turnOn(j);
 
 				} //end if
-//				if(startFlag == 1){//if EXTI occurs
-//					columnTime--;//decrease columnTime- means, that columnTime is too long.
-//					break;//and exit loop. Will be started in next run.
-//				}
+				if(startFlag == 1){//if EXTI occurs
+					columnTime--;//decrease columnTime- means, that columnTime is too long.
+					break;//and exit loop. Will be started in next run.
+				}
 				delayUs(columnTime);
 
 			} //end for
@@ -156,7 +157,6 @@ void matrixDisplay() {
 
 		} //end for
 		busyFlag = 0;
-		columnTime--;
 	}else{
 		columnTime++;
 		//^if startFlag isn't on instantly after display cycle means that column time are too short.

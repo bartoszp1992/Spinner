@@ -50,6 +50,10 @@
  * v0.58
  * 			shorted working time.
  *
+ * v0.59
+ * 			prepared for Synchro v0.2 board- disabled pullup for exti pin.
+ * 			changed for hall sensor
+ *
  *todo:
  *better us counter
  *short pointer at 00:00
@@ -352,6 +356,12 @@ int main(void)
 				matrixWriteTime(hours, minutes, seconds, subseconds, 0); //reload full array takes too log time
 			} else { //if watch still accelerates, show splash
 				matrixSplash(50);
+//				if(HAL_GPIO_ReadPin(EXTI_GPIO_Port, EXTI_Pin)==1){
+//					L1_ON;
+//				}else{
+//					L1_OFF;
+//				}
+				//^for debug
 			}
 
 		}
@@ -561,7 +571,7 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin : EXTI_Pin */
   GPIO_InitStruct.Pin = EXTI_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
-  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(EXTI_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : WAKE_Pin SET_Pin */
