@@ -71,7 +71,7 @@ uint8_t screenMatrix[7][60];//variable to store matrix content.
 //matrix functions
 void matrixWriteMarkers(void);
 void matrixWriteTime(uint8_t hour, uint8_t minute, uint8_t second, uint32_t subsecond, uint8_t state);
-void matrixDisplay(void);
+void matrixDisplayCcw(void);
 void matrixDisplayInit(void);
 void matrixSplash(uint16_t delay);
 

@@ -54,6 +54,9 @@
  * 			prepared for Synchro v0.2 board- disabled pullup for exti pin.
  * 			changed for hall sensor
  *
+ *v0.6
+ *			corrected counter clockwise mode- now just the matrix is shown swapped.
+ *
  *todo:
  *better us counter
  *short pointer at 00:00
@@ -348,11 +351,11 @@ int main(void)
 			if (rpt >= minRpt) { //if rpt are enough, run display
 
 				getTime();
-				ccw();
+				//ccw();
 
 				matrixWriteMarkers();
 				matrixWriteTime(hours, minutes, seconds, subseconds, 1);
-				matrixDisplay();
+				matrixDisplayCcw();
 				matrixWriteTime(hours, minutes, seconds, subseconds, 0); //reload full array takes too log time
 			} else { //if watch still accelerates, show splash
 				matrixSplash(50);

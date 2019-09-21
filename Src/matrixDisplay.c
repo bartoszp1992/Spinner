@@ -102,11 +102,11 @@ void matrixWriteTime(uint8_t hour, uint8_t minute, uint8_t second, uint32_t subs
 	for (int i = 4; i <= 6; i++) {
 		//screenMatrix[i][hour * 5] = state;//simple
 
-		screenMatrix[i][hour * 5 - ((60-minute)/10)] = state;//counter clockwise
-		screenMatrix[i][hour * 5 - ((60-minute)/10)-1] = state;
+//		screenMatrix[i][hour * 5 - ((60-minute)/10)] = state;//counter clockwise
+//		screenMatrix[i][hour * 5 - ((60-minute)/10)-1] = state;
 
-		//screenMatrix[i][hour * 5 + (minute/10)] = state;//clockwise
-		//screenMatrix[i][hour * 5 + (minute/10)+1] = state;
+		screenMatrix[i][hour * 5 + (minute/10)] = state;//clockwise
+		screenMatrix[i][hour * 5 + (minute/10)+1] = state;
 	}
 }
 
@@ -129,13 +129,13 @@ void matrixWriteMarkers() { //write hours markers to matrix
 }
 
 //displaying matrix
-void matrixDisplay() {
+void matrixDisplayCcw() {
 	if (startFlag == 1) {
 		startFlag = 0;
 		busyFlag = 1;
 		ALL_OFF
 		;
-		for (int i = 0; i <= 59; i++) { //for each from 60 column repeat:(i are column number)
+		for (int i = 59; i >= 0; i--) { //for each from 60 column repeat:(i are column number)
 
 			for (int j = 0; j <= 6; j++) { //for each pixel repeat:(j are row number)
 
