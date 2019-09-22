@@ -3,7 +3,7 @@
   (general
     (thickness 1.6)
     (drawings 20)
-    (tracks 1)
+    (tracks 0)
     (zones 0)
     (modules 0)
     (nets 1)
@@ -141,8 +141,6 @@
   (gr_circle (center 230.1 99.9) (end 230.3 99.8) (layer F.SilkS) (width 0.12))
   (gr_circle (center 230.1 99.9) (end 247.6 99.9) (layer Edge.Cuts) (width 0.05))
   (gr_circle (center 230.1 99.9) (end 252.6 99.9) (layer Edge.Cuts) (width 0.05))
-
-  (segment (start 230.1 119.95) (end 230.1 121.7) (width 0.25) (layer F.Cu) (net 0))
 
   (zone (net 0) (net_name "") (layer F.Cu) (tstamp 0) (hatch edge 0.508)
     (connect_pads (clearance 0.508))

@@ -1,4 +1,4 @@
-PCB SYNCHRO 2 v0.1 5.
+PCB SYNCHRO 2 v0.2 5.
 
 quantity value package cost
 
@@ -19,23 +19,23 @@ cells:
 2 lipo120mAh 12x25x5 10. (wolumen)
 
 transistors:
-1 BS170F SOT-23 1. (piekarz)
+1 IRLML0030TR SOT-23 2. (piekarz)
 
 resistors:
-1 1k 0603 0.06 (piekarz)
-1 120R 0603
+1 15k 0603 0.06 (piekarz)
+1 470R 0603
 2 10k 0603
 7 220R 0603
 
 switches:
-2 TS3605 3.9x6mm  0.4
+2 TS3605 3.9x6mm  0.4 (piekarz)
 
 chips:
 1 TC1186 SOT-23-5 2. (AVT)
-1 KTIR0711S DIP4 3. (piekarz)
+1 SS311PT SOT-23-3 3. (piekarz)
 
 uCs:
-1 STM32L041F6Px TSSOP20 10 (kamami)
+1 STM32L041F6Px TSSOP20 10 (kamami/farnell)
 
 crystals:
 1 32.768kHz 2x6mm 1. (botland)

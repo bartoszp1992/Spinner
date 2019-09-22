@@ -5,6 +5,7 @@
 #define matrixDisplay_H
 
 TIM_HandleTypeDef htim2;
+TIM_HandleTypeDef htim21;
 
 //counting, synchro and times
 volatile uint8_t startFlag;//fot start alway in the same place
@@ -13,6 +14,8 @@ volatile uint32_t rotatesCounter;
 volatile uint32_t rpt;// rotates per time
 volatile uint32_t rotateTime;
 volatile uint32_t columnTime;
+
+volatile uint32_t pulses;
 
 //delays
 uint8_t contacts;
