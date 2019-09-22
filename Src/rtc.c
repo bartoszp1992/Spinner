@@ -9,7 +9,8 @@ void getTime() {
 	hours = gTime.Hours;
 	minutes = gTime.Minutes;
 	seconds = gTime.Seconds;
-	subseconds = gTime.SubSeconds;
+//	subseconds = (gTime.SubSeconds*10)/43;// subsecond from RTC is 1/255 of second(becouse of RTC sync predivider)
+//	//^ 1/60 of second will be RTC subsecond divided by 4.25
 }
 
 void setTime() {

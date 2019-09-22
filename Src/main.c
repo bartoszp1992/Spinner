@@ -60,9 +60,15 @@
  *v0.7
  *			added new matrixDisplah.c file for reverse columnTime counting.
  *
+ *v0.71
+ *			new idea for columnTimeCounting
+ *
  *todo:
- *better us counter
- *short pointer at 00:00
+ *shaky screen- caused by matrixWriteTime(); Move this function to TIM2 interrupt.
+ *counting columnTime is not enough presice. Where's the problem?
+
+
+  *short pointer at 00:00
 
  currents:
  stop mode- 64uA
@@ -361,20 +367,13 @@ int main(void)
 			if (rpt >= minRpt) { //if rpt are enough, run display
 
 				getTime();
-				//ccw();
 
 				matrixWriteMarkers();
-				matrixWriteTime(hours, minutes, seconds, subseconds, 1);
+				matrixWriteTime(hours, minutes, seconds, 1);
 				matrixDisplayCcw();
-				matrixWriteTime(hours, minutes, seconds, subseconds, 0); //reload full array takes too log time
+				matrixWriteTime(hours, minutes, seconds, 0); //reload full array takes too log time
 			} else { //if watch still accelerates, show splash
 				matrixSplash(50);
-//				if(HAL_GPIO_ReadPin(EXTI_GPIO_Port, EXTI_Pin)==1){
-//					L1_ON;
-//				}else{
-//					L1_OFF;
-//				}
-				//^for debug
 			}
 
 		}

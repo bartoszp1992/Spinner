@@ -7,9 +7,11 @@
 TIM_HandleTypeDef htim2;
 TIM_HandleTypeDef htim21;
 
+
 //counting, synchro and times
 volatile uint8_t startFlag;//fot start alway in the same place
-volatile uint8_t busyFlag;
+volatile uint8_t columnBusyFlag;
+volatile uint8_t displayBusyFlag;
 volatile uint32_t rotatesCounter;
 volatile uint32_t rpt;// rotates per time
 volatile uint32_t rotateTime;
@@ -73,7 +75,7 @@ uint8_t screenMatrix[7][60];//variable to store matrix content.
 
 //matrix functions
 void matrixWriteMarkers(void);
-void matrixWriteTime(uint8_t hour, uint8_t minute, uint8_t second, uint32_t subsecond, uint8_t state);
+void matrixWriteTime(uint8_t hour, uint8_t minute, uint8_t second, uint8_t state);
 void matrixDisplayCcw(void);
 void matrixDisplayInit(void);
 void matrixSplash(uint16_t delay);

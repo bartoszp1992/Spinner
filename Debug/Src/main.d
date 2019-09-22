@@ -17,6 +17,8 @@ Src/main.o: ../Src/main.c \
  /home/bartosz/projekty/arm/workspace/Spinner/Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h \
  /home/bartosz/projekty/arm/workspace/Spinner/Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h \
  /home/bartosz/projekty/arm/workspace/Spinner/Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h \
+ /home/bartosz/projekty/arm/workspace/Spinner/Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc.h \
+ /home/bartosz/projekty/arm/workspace/Spinner/Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc_ex.h \
  /home/bartosz/projekty/arm/workspace/Spinner/Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h \
  /home/bartosz/projekty/arm/workspace/Spinner/Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h \
  /home/bartosz/projekty/arm/workspace/Spinner/Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h \
@@ -67,6 +69,10 @@ Src/main.o: ../Src/main.c \
 /home/bartosz/projekty/arm/workspace/Spinner/Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h:
 
 /home/bartosz/projekty/arm/workspace/Spinner/Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h:
+
+/home/bartosz/projekty/arm/workspace/Spinner/Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc.h:
+
+/home/bartosz/projekty/arm/workspace/Spinner/Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_adc_ex.h:
 
 /home/bartosz/projekty/arm/workspace/Spinner/Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h:
 
