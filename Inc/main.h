@@ -69,6 +69,8 @@ void Error_Handler(void);
 #define SET_Pin GPIO_PIN_4
 #define SET_GPIO_Port GPIOA
 #define SET_EXTI_IRQn EXTI4_15_IRQn
+#define VBAT_Pin GPIO_PIN_5
+#define VBAT_GPIO_Port GPIOA
 #define L0_Pin GPIO_PIN_6
 #define L0_GPIO_Port GPIOA
 #define L1_Pin GPIO_PIN_7
