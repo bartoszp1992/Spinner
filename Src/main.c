@@ -367,11 +367,11 @@ int main(void)
 			if (rpt >= minRpt) { //if rpt are enough, run display
 
 				getTime();
-//
-//				matrixWriteMarkers();
-//				matrixWriteTime(hours, minutes, seconds, 1);
+
+				matrixWriteMarkers();
+				matrixWriteTime(hours, minutes, seconds, 1);
 				matrixDisplayCcw();
-//				matrixWriteTime(hours, minutes, seconds, 0); //reload full array takes too log time
+				matrixWriteTime(hours, minutes, seconds, 0); //reload full array takes too log time
 			} else { //if watch still accelerates, show splash
 				matrixSplash(50);
 			}
@@ -632,7 +632,7 @@ static void MX_TIM21_Init(void)
   htim21.Instance = TIM21;
   htim21.Init.Prescaler = 31;
   htim21.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim21.Init.Period = 9;
+  htim21.Init.Period = 99;
   htim21.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim21.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim21) != HAL_OK)
@@ -706,13 +706,13 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_Init(L2_GPIO_Port, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
-  HAL_NVIC_SetPriority(EXTI0_1_IRQn, 1, 0);
+  HAL_NVIC_SetPriority(EXTI0_1_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(EXTI0_1_IRQn);
 
-  HAL_NVIC_SetPriority(EXTI2_3_IRQn, 3, 0);
+  HAL_NVIC_SetPriority(EXTI2_3_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(EXTI2_3_IRQn);
 
-  HAL_NVIC_SetPriority(EXTI4_15_IRQn, 3, 0);
+  HAL_NVIC_SetPriority(EXTI4_15_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(EXTI4_15_IRQn);
 
 }

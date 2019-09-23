@@ -72,7 +72,7 @@ Drivers/STM32L0xx_HAL_Driver/Src/%.o: ../Drivers/STM32L0xx_HAL_Driver/Src/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: MCU GCC Compiler'
 	@echo $(PWD)
-	arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -DUSE_HAL_DRIVER -DSTM32L041xx '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -I"D:/projekty Embedded/Spinner/Inc" -I"D:/projekty Embedded/Spinner/Drivers/STM32L0xx_HAL_Driver/Inc" -I"D:/projekty Embedded/Spinner/Drivers/STM32L0xx_HAL_Driver/Inc/Legacy" -I"D:/projekty Embedded/Spinner/Drivers/CMSIS/Device/ST/STM32L0xx/Include" -I"D:/projekty Embedded/Spinner/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -o "$@" "$<"
+	arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -DUSE_HAL_DRIVER -DSTM32L041xx '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -I"/home/bartosz/projekty/arm/workspace/Spinner/Inc" -I"/home/bartosz/projekty/arm/workspace/Spinner/Drivers/STM32L0xx_HAL_Driver/Inc" -I"/home/bartosz/projekty/arm/workspace/Spinner/Drivers/STM32L0xx_HAL_Driver/Inc/Legacy" -I"/home/bartosz/projekty/arm/workspace/Spinner/Drivers/CMSIS/Device/ST/STM32L0xx/Include" -I"/home/bartosz/projekty/arm/workspace/Spinner/Drivers/CMSIS/Include"  -Og -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
