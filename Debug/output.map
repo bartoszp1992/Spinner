@@ -3671,7 +3671,7 @@ LOAD c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17
                 0x00000420       0x1e c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.17.0.201812190825/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtn.o
 OUTPUT(Spinner.elf elf32-littlearm)
 
-.debug_info     0x00000000     0xd69c
+.debug_info     0x00000000     0xd69a
  .debug_info    0x00000000      0x7f2 Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.o
  .debug_info    0x000007f2      0xf2c Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.o
  .debug_info    0x0000171e      0x7b9 Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.o
@@ -3682,13 +3682,13 @@ OUTPUT(Spinner.elf elf32-littlearm)
  .debug_info    0x00003cef      0xd7b Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rtc.o
  .debug_info    0x00004a6a     0x3009 Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.o
  .debug_info    0x00007a73      0x68b Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim_ex.o
- .debug_info    0x000080fe     0x1fac Src/main.o
- .debug_info    0x0000a0aa     0x1650 Src/matrixDisplay.o
- .debug_info    0x0000b6fa      0x576 Src/rtc.o
- .debug_info    0x0000bc70      0xf80 Src/stm32l0xx_hal_msp.o
- .debug_info    0x0000cbf0      0x6f5 Src/stm32l0xx_it.o
- .debug_info    0x0000d2e5      0x395 Src/system_stm32l0xx.o
- .debug_info    0x0000d67a       0x22 startup/startup_stm32l041xx.o
+ .debug_info    0x000080fe     0x1faa Src/main.o
+ .debug_info    0x0000a0a8     0x1650 Src/matrixDisplay.o
+ .debug_info    0x0000b6f8      0x576 Src/rtc.o
+ .debug_info    0x0000bc6e      0xf80 Src/stm32l0xx_hal_msp.o
+ .debug_info    0x0000cbee      0x6f5 Src/stm32l0xx_it.o
+ .debug_info    0x0000d2e3      0x395 Src/system_stm32l0xx.o
+ .debug_info    0x0000d678       0x22 startup/startup_stm32l041xx.o
 
 .debug_abbrev   0x00000000     0x1f00
  .debug_abbrev  0x00000000      0x236 Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.o
