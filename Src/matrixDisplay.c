@@ -1,5 +1,6 @@
 #include "matrixDisplay.h"
 #include "main.h"
+#include "rtc.h"
 
 void matrixDisplayInit(void) {
 	workingTime = 20; //TIM2 cycles. time of watch spinning
@@ -74,12 +75,28 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 			//^if counts to working time, turns on mode 0 - stop mode.
 		}
 
+		//clear array and set new
+
+//		matrixWriteTime(hours, minutes, seconds, 0);
+//		getTime();
+
+		for(int i=0;i<=59;i++){
+			for(int j=0;j<=6;j++){
+				screenMatrix[j][i]=0;
+			}
+		}
+		matrixWriteMarkers();
+		matrixWriteTime(hours, minutes, seconds, 1);
+
+
+
 	}
 
 }
 
 //writing pointers to matrix
-void matrixWriteTime(uint8_t hour, uint8_t minute, uint8_t second, uint8_t state) {
+void matrixWriteTime(uint8_t hour, uint8_t minute, uint8_t second,
+		uint8_t state) {
 
 	for (int i = 0; i <= 2; i++) {
 		screenMatrix[i][second] = state;
@@ -88,9 +105,11 @@ void matrixWriteTime(uint8_t hour, uint8_t minute, uint8_t second, uint8_t state
 		screenMatrix[i][minute] = state;
 	}
 
+	hour = (hour*5) + (minute / 10);
+
 	for (int i = 4; i <= 6; i++) {
 
-		screenMatrix[i][hour * 5 + (minute / 10)] = state;	//clockwise
+		screenMatrix[i][hour] = state;	//clockwise
 	}
 }
 
@@ -137,17 +156,17 @@ void matrixDisplayCcw() {
 			ALL_OFF
 			; //turn off all LEDs
 
-			if(startFlag == 1){
+			if (startFlag == 1) {
 				break;
 			}
 
 		} //end for column
-		//startFlag = 0;
+		  //startFlag = 0;
 		displayBusyFlag = 0;
 	} //else { //end for matrix
-		//columnTime++;
-		//^if startFlag isn't on instantly after display cycle means that column time are too short.
-	//}
+	  //columnTime++;
+	  //^if startFlag isn't on instantly after display cycle means that column time are too short.
+	  //}
 } //end function
 
 void matrixSplash(uint16_t delay) {

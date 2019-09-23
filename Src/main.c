@@ -203,7 +203,7 @@ int main(void)
 		//SECTION 1 - CLOCK SETTING //press SET only
 		while (mode == 2) { //variable are set by SET button in exti
 
-			OPTO_OFF;
+			HALL_OFF;
 			ALL_OFF
 			;
 			HAL_Delay(contacts);
@@ -363,15 +363,15 @@ int main(void)
 		//SECTION 2 - display mode
 
 		if (mode == 1) {
-			OPTO_ON; //turn on interrupter ant vent
+			HALL_ON; //turn on interrupter ant vent
 			if (rpt >= minRpt) { //if rpt are enough, run display
 
 				getTime();
-
-				matrixWriteMarkers();
-				matrixWriteTime(hours, minutes, seconds, 1);
+//
+//				matrixWriteMarkers();
+//				matrixWriteTime(hours, minutes, seconds, 1);
 				matrixDisplayCcw();
-				matrixWriteTime(hours, minutes, seconds, 0); //reload full array takes too log time
+//				matrixWriteTime(hours, minutes, seconds, 0); //reload full array takes too log time
 			} else { //if watch still accelerates, show splash
 				matrixSplash(50);
 			}
@@ -379,7 +379,7 @@ int main(void)
 		}
 
 		if (mode == 0) { //this mode are set by sync interrupt, when workingCounter are bigger than set(when displaying time is up).
-			OPTO_OFF; //turn off interrupter and vent
+			HALL_OFF; //turn off interrupter and vent
 			HAL_PWR_EnterSTOPMode(PWR_MAINREGULATOR_ON, PWR_STOPENTRY_WFI); //go to stop mode :)
 		}
     /* USER CODE END WHILE */
@@ -589,7 +589,7 @@ static void MX_TIM2_Init(void)
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim2.Init.Period = 7999;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-  htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
   {
     Error_Handler();
@@ -671,15 +671,15 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, OPTO_Pin|L0_Pin|L1_Pin|L3_Pin 
+  HAL_GPIO_WritePin(GPIOA, HALL_Pin|L0_Pin|L1_Pin|L3_Pin 
                           |L4_Pin|L5_Pin|L6_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(L2_GPIO_Port, L2_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : OPTO_Pin L0_Pin L1_Pin L3_Pin 
+  /*Configure GPIO pins : HALL_Pin L0_Pin L1_Pin L3_Pin 
                            L4_Pin L5_Pin L6_Pin */
-  GPIO_InitStruct.Pin = OPTO_Pin|L0_Pin|L1_Pin|L3_Pin 
+  GPIO_InitStruct.Pin = HALL_Pin|L0_Pin|L1_Pin|L3_Pin 
                           |L4_Pin|L5_Pin|L6_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;

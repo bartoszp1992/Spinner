@@ -25,9 +25,4 @@ void setTime() {
 
 }
 
-void ccw(void) {//flips clock by a mirror. Use if motor runs CounterClockWise :)
-	hours = 12 - hours;
-	minutes = 60 - minutes;
-	seconds = 60 - seconds;
-}
 

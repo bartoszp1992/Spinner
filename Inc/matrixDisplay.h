@@ -43,7 +43,7 @@ uint8_t settingsLevel;//
  * 5- reset
  */
 
-uint8_t screenMatrix[7][60];//variable to store matrix content.
+volatile uint8_t screenMatrix[7][60];//variable to store matrix content.
 
 //matrix LEDs
 #define L0_ON HAL_GPIO_WritePin(L0_GPIO_Port, L0_Pin, 1)
@@ -66,8 +66,8 @@ uint8_t screenMatrix[7][60];//variable to store matrix content.
 #define ALL_ON L0_ON; L1_ON; L2_ON; L3_ON; L4_ON; L5_ON; L6_ON
 
 //opto interrupter and motor
-#define OPTO_ON HAL_GPIO_WritePin(OPTO_GPIO_Port, OPTO_Pin, 1)
-#define OPTO_OFF HAL_GPIO_WritePin(OPTO_GPIO_Port, OPTO_Pin, 0)
+#define HALL_ON HAL_GPIO_WritePin(HALL_GPIO_Port, HALL_Pin, 1)
+#define HALL_OFF HAL_GPIO_WritePin(HALL_GPIO_Port, HALL_Pin, 0)
 
 //buttons
 #define WAKE HAL_GPIO_ReadPin(WAKE_GPIO_Port, WAKE_Pin)==0

@@ -11,15 +11,14 @@ RTC_TimeTypeDef sTime;
 
 RTC_HandleTypeDef hrtc;
 
-uint8_t hours;
-uint8_t minutes;
-uint8_t seconds;
-uint32_t subseconds;
+volatile uint8_t hours;
+volatile uint8_t minutes;
+volatile uint8_t seconds;
+volatile uint32_t subseconds;
 
 void getTime(void);
 void setTime(void);
 
-void ccw(void);//counter-clockwise
 
 
 
