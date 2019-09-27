@@ -90,6 +90,8 @@ void delayUs(uint32_t delay);
 
 //others
 void showBinary(uint8_t number);
+uint8_t pullFirstDigit(uint8_t number);
+uint8_t pullSecondDigit(uint8_t number);
 
 
 #endif

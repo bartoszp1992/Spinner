@@ -3,7 +3,7 @@
 #include "rtc.h"
 
 void matrixDisplayInit(void) {
-	workingTime = 20; //TIM2 cycles. time of watch spinning
+	workingTime = 20; //TIM2 cycles. time of watch spinning or run in settings mode
 
 	workingCounter = workingTime; //sleep mode as default. When equals, sync interrupt turns on mode 0(stop mode)
 	mode = 0; //sleep mode as default. As a supplement to ^. Becouse these variables are dependent.
@@ -27,9 +27,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
 	}
 
 	if (GPIO_Pin == GPIO_PIN_3) { //wake button
-		if (mode != 2)
-			workingCounter = 0; //reset spinning time counter. mode will be set to 1 below
-		//^run only outside settings
+			workingCounter = 0; //reset working time counter. mode will be set to 1 below
 
 		if (mode == 0) {
 			mode = 1;//set to 1- display mode. but only from 0- stop mode. It can't turns on display mode from settings(2)
@@ -39,6 +37,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
 
 	}
 	if (GPIO_Pin == GPIO_PIN_4) { //set button
+		workingCounter = 0;//set also reset working counter- becouse of settings
 		if (mode == 0) {
 			mode = 2; //turns on settings mode- only from stop. It cant interfere in settings mode and with ONDEMAND/FORCE mode select
 			SystemClock_Config(); //set clock after wakeup
@@ -278,6 +277,18 @@ void toggleAll() {
 	HAL_GPIO_TogglePin(L5_GPIO_Port, L5_Pin);
 	HAL_GPIO_TogglePin(L6_GPIO_Port, L6_Pin);
 }
+
+uint8_t pullFirstDigit(uint8_t number){
+
+	return number /10;
+}
+
+uint8_t pullSecondDigit(uint8_t number){
+
+	uint8_t firstDigit = number /10;
+	return number - (firstDigit *10);
+}
+
 
 //show binary digit- for settings mode
 void showBinary(uint8_t number) {
