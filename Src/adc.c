@@ -16,5 +16,5 @@ void adcInit(void) {
 
 void adcConvert(void){
 	voltage = ((330*adcReading[0])/4095)*2;
-	batteryState = 420 - voltage;
+	batteryState = (60*(voltage-340))/80;
 }

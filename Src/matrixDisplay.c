@@ -102,21 +102,28 @@ void delayUs(uint32_t delay) {
 		;
 }
 
+
+void matrixWriteState(uint8_t state, uint8_t level){
+	for(int i = 0; i<state; i++){
+		screenMatrix[6][i] = level;
+	}
+}
+
 //writing pointers to matrix
 void matrixWriteTime(uint8_t hour, uint8_t minute, uint8_t second,
-		uint8_t state) {
+		uint8_t level) {
 
 	for (int i = 1; i <= 2; i++) {
-		screenMatrix[i][second] = state;
+		screenMatrix[i][second] = level;
 	}
 	for (int i = 2; i <= 6; i++) {
-		screenMatrix[i][minute] = state;
+		screenMatrix[i][minute] = level;
 	}
 
 	for (int i = 4; i <= 6; i++) {
 
-		screenMatrix[i][hour * 5 + (minute / 10)] = state; //clockwise
-		screenMatrix[i][hour * 5 + (minute / 10) + 1] = state;
+		screenMatrix[i][hour * 5 + (minute / 10)] = level; //clockwise
+		screenMatrix[i][hour * 5 + (minute / 10) + 1] = level;
 	}
 }
 
@@ -173,6 +180,8 @@ void matrixDisplayCcw() {
 		//^if startFlag isn't on instantly after display cycle means that column time are too short.
 	}
 } //end function
+
+
 
 void matrixSplash(uint16_t delay) {
 
