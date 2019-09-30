@@ -79,7 +79,8 @@ volatile uint8_t screenMatrix[7][60];//variable to store matrix content.
 //matrix functions
 void matrixWriteMarkers(void);
 void matrixWriteTime(uint8_t hour, uint8_t minute, uint8_t second, uint8_t level);
-void matrixWriteState(uint8_t state, uint8_t level);
+void matrixWriteState(void);
+void matrixClearState(void);
 void matrixDisplayCcw(void);
 void matrixDisplayInit(void);
 void matrixSplash(uint16_t delay);

@@ -1,6 +1,7 @@
 #include "matrixDisplay.h"
 #include "main.h"
 #include "rtc.h"
+#include "adc.h"
 
 void matrixDisplayInit(void) {
 	workingTime = 20; //TIM2 cycles. time of watch spinning or run in settings mode
@@ -56,6 +57,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 
 	if (htim->Instance == TIM2) {//each second
 
+		if(batteryState<10) forceMode = 0;
+
 		//column time measurement
 		rpt = rotatesCounter;
 		rotatesCounter = 0; //reset rotates counter
@@ -103,9 +106,15 @@ void delayUs(uint32_t delay) {
 }
 
 
-void matrixWriteState(uint8_t state, uint8_t level){
-	for(int i = 0; i<state; i++){
-		screenMatrix[6][i] = level;
+void matrixWriteState(){
+	for(int i = 0; i<batteryState; i++){
+		screenMatrix[6][i] = 1;
+	}
+}
+
+void matrixClearState(){
+	for(int i = 0; i<60; i++){
+		screenMatrix[6][i] = 0;
 	}
 }
 

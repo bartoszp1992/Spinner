@@ -32,7 +32,8 @@ Src/matrixDisplay.o: ../Src/matrixDisplay.c \
  /home/bartosz/projekty/arm/workspace/Spinner/Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_tim.h \
  /home/bartosz/projekty/arm/workspace/Spinner/Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_tim_ex.h \
  /home/bartosz/projekty/arm/workspace/Spinner/Inc/main.h \
- /home/bartosz/projekty/arm/workspace/Spinner/Inc/rtc.h
+ /home/bartosz/projekty/arm/workspace/Spinner/Inc/rtc.h \
+ /home/bartosz/projekty/arm/workspace/Spinner/Inc/adc.h
 
 /home/bartosz/projekty/arm/workspace/Spinner/Inc/matrixDisplay.h:
 
@@ -101,3 +102,5 @@ Src/matrixDisplay.o: ../Src/matrixDisplay.c \
 /home/bartosz/projekty/arm/workspace/Spinner/Inc/main.h:
 
 /home/bartosz/projekty/arm/workspace/Spinner/Inc/rtc.h:
+
+/home/bartosz/projekty/arm/workspace/Spinner/Inc/adc.h:
