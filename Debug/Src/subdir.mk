@@ -4,6 +4,7 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../Src/adc.c \
 ../Src/main.c \
 ../Src/matrixDisplay.c \
 ../Src/rtc.c \
@@ -13,6 +14,7 @@ C_SRCS += \
 ../Src/system_stm32l0xx.c 
 
 OBJS += \
+./Src/adc.o \
 ./Src/main.o \
 ./Src/matrixDisplay.o \
 ./Src/rtc.o \
@@ -22,6 +24,7 @@ OBJS += \
 ./Src/system_stm32l0xx.o 
 
 C_DEPS += \
+./Src/adc.d \
 ./Src/main.d \
 ./Src/matrixDisplay.d \
 ./Src/rtc.d \

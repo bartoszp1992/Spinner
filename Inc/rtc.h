@@ -20,6 +20,4 @@ void getTime(void);
 void setTime(void);
 
 
-
-
 #endif

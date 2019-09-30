@@ -8,6 +8,9 @@ void matrixDisplayInit(void) {
 	workingCounter = workingTime; //sleep mode as default. When equals, sync interrupt turns on mode 0(stop mode)
 	mode = 0; //sleep mode as default. As a supplement to ^. Becouse these variables are dependent.
 
+	weakCounter = 0;
+	weakTime = 5;
+
 	minRpt = 20; //minimum rotating speed- turns on time showing if reached.
 	settingsLevel = 0; //default settings level are 0, becouse settings are turned off by default
 	contacts = 200; //switches contacts vibrations
@@ -27,20 +30,22 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
 	}
 
 	if (GPIO_Pin == GPIO_PIN_3) { //wake button
-			workingCounter = 0; //reset working time counter. mode will be set to 1 below
+		workingCounter = 0; //reset working time counter. mode will be set to 1 below
 
 		if (mode == 0) {
-			mode = 1;//set to 1- display mode. but only from 0- stop mode. It can't turns on display mode from settings(2)
+			mode = 1; //set to 1- display mode. but only from 0- stop mode. It can't turns on display mode from settings(2)
 			SystemClock_Config();		//set clock after wakeup
 			rpt = 0;		//set start rpt as 0
+			weakCounter = 0;		//reset weak counter
 		}
 
 	}
 	if (GPIO_Pin == GPIO_PIN_4) { //set button
-		workingCounter = 0;//set also reset working counter- becouse of settings
+		workingCounter = 0; //set also reset working counter- becouse of settings
 		if (mode == 0) {
 			mode = 2; //turns on settings mode- only from stop. It cant interfere in settings mode and with ONDEMAND/FORCE mode select
 			SystemClock_Config(); //set clock after wakeup
+			weakCounter = 0; //reset weak counter
 		}
 
 	}
@@ -49,12 +54,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
 //sync interrupts- every second
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 
-	if (htim->Instance == TIM2) {
-
-//		matrixWriteTime(hours, minutes, seconds, 0);
-//		getTime();
-//		matrixWriteMarkers();
-//		matrixWriteTime(hours, minutes, seconds, 1);
+	if (htim->Instance == TIM2) {//each second
 
 		//column time measurement
 		rpt = rotatesCounter;
@@ -62,6 +62,17 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 		if (rpt < minRpt) {
 			rotateTime = (1000000 / rpt);
 			columnTime = (rotateTime / 60);
+
+			if (mode == 1) {//increment weak Counter only in running mode
+				weakCounter++; //if rpt < normal, start counting weakTime
+				if (weakCounter > weakTime) {
+					mode = 0;
+					workingCounter = workingTime;
+				}
+			}
+
+		} else {
+			weakCounter = 0; //reset counter if rpt is above normal.
 		}
 		//^column time is counting only in start sequence. If rpt reaches minimum, column time is only corrected inside matrixDisplay()
 
@@ -95,18 +106,14 @@ void delayUs(uint32_t delay) {
 void matrixWriteTime(uint8_t hour, uint8_t minute, uint8_t second,
 		uint8_t state) {
 
-	for (int i = 0; i <= 0; i++) {
+	for (int i = 1; i <= 2; i++) {
 		screenMatrix[i][second] = state;
 	}
-	for (int i = 3; i <= 6; i++) {
+	for (int i = 2; i <= 6; i++) {
 		screenMatrix[i][minute] = state;
 	}
 
 	for (int i = 4; i <= 6; i++) {
-		//screenMatrix[i][hour * 5] = state;//simple
-
-//		screenMatrix[i][hour * 5 - ((60-minute)/10)] = state;//counter clockwise
-//		screenMatrix[i][hour * 5 - ((60-minute)/10)-1] = state;
 
 		screenMatrix[i][hour * 5 + (minute / 10)] = state; //clockwise
 		screenMatrix[i][hour * 5 + (minute / 10) + 1] = state;
@@ -278,17 +285,16 @@ void toggleAll() {
 	HAL_GPIO_TogglePin(L6_GPIO_Port, L6_Pin);
 }
 
-uint8_t pullFirstDigit(uint8_t number){
+uint8_t pullFirstDigit(uint8_t number) {
 
-	return number /10;
+	return number / 10;
 }
 
-uint8_t pullSecondDigit(uint8_t number){
+uint8_t pullSecondDigit(uint8_t number) {
 
-	uint8_t firstDigit = number /10;
-	return number - (firstDigit *10);
+	uint8_t firstDigit = number / 10;
+	return number - (firstDigit * 10);
 }
-
 
 //show binary digit- for settings mode
 void showBinary(uint8_t number) {

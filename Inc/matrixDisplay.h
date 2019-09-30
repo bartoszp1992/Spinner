@@ -17,6 +17,7 @@ volatile uint32_t rpt;// rotates per time
 volatile uint32_t rotateTime;
 volatile uint32_t columnTime;
 
+
 volatile uint32_t pulses;
 
 //delays
@@ -29,6 +30,8 @@ uint8_t forceMode;
 volatile uint8_t workingCounter;
 volatile uint8_t workingTime;//time of spinning in ondemand mode
 volatile uint8_t minRpt;//minimum rpt
+volatile uint8_t weakCounter;
+volatile uint8_t weakTime;
 uint8_t settingsLevel;//
 
 

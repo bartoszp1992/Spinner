@@ -1,0 +1,21 @@
+weakCounter - liczy czas, który mija podczas obrotów niższych niż minimalne (rpt<minRpt)
+
+forceMode- jest włączany/wyłączany tylko w pętli głównej. Jeżeli ostatnio był włączany, będzie aktywny do momentu wyłączenia. i tylko wtedy. Kiedy zegarek zostanie uśpiony przez weakCounter - tryb force pozostaje aktywny i podczas wzbudzenia zegarek wróci do tego właśnie trybu.
+
+
+startFlag - jest aktywowany przez przejście przez Halla. Kiedy jest aktywny, sekwencja wyświetlania zostanie rozpoczęta.
+
+columnBusy- brak zastowowania
+displayBusy- brak zastosowania
+
+rotatesCounter - licznik obrotów- inkrementowana przez przejście halla, resetowana i buforowana do rpt przez przerwanie od TIM2.
+
+rpt- rotates per time- bufor do którego w każdym przerwaniu TIM2 zostają załadowane impulsy rotatesCounter. Przechowuje aktualną wartość obrotów na sekundę, jest używany do liczenia czasu kolumny- ale tylko kiedy jest poniżej minRpt. kiedy jest powyżej- czas kolumny jest tylko korygowany w matrixDisplayCcw(). Jest używany też jako flaga do liczenia weakTime- czasu pracy poniżej obrotów minimalnych. 
+
+rotateTime - czas jednego obrotu. Liczony tylko kiedy rpt jest poniżej minimum
+
+columnTime - czas wyświetlania jednej kolumny matrycy(np wskazówka minut)
+
+weakCounter- licznik czasu pracy poniżej obrotów minimalnych. jest inkrementowany przez przerwanie sekundowe tylko wtedy, kiedy rpt jest poniżej minRpt. Jest zerowana kiedy rpt>=minRpt, oraz przez wciśnięcie każdego z przycisków.
+
+

@@ -17,6 +17,7 @@
 "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rtc_ex.o"
 "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.o"
 "Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim_ex.o"
+"Src/adc.o"
 "Src/main.o"
 "Src/matrixDisplay.o"
 "Src/rtc.o"
