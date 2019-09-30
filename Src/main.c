@@ -388,8 +388,11 @@ int main(void)
 
 				matrixWriteMarkers();
 				matrixWriteTime(hours, minutes, seconds, 1);
+				adcConvert();
+				matrixWriteState(batteryState, 1);
 				matrixDisplayCcw();
 				matrixWriteTime(hours, minutes, seconds, 0); //reload full array takes too log time
+				matrixWriteState(batteryState, 0);
 			} else { //if watch still accelerates, show splash
 				matrixSplash(50);
 			}
@@ -686,7 +689,7 @@ static void MX_DMA_Init(void)
 
   /* DMA interrupt init */
   /* DMA1_Channel1_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 1, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel1_IRQn);
 
 }

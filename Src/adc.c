@@ -12,6 +12,8 @@ void adcInit(void) {
 		Error_Handler();
 	}
 
+
+//adcReading[0] = 2500;
 }
 
 void adcConvert(void){
