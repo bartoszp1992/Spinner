@@ -10,7 +10,7 @@ void matrixDisplayInit(void) {
 	mode = 0; //sleep mode as default. As a supplement to ^. Becouse these variables are dependent.
 
 	weakCounter = 0;
-	weakTime = 5;
+	weakTime = 8;
 
 	minRpt = 20; //minimum rotating speed- turns on time showing if reached.
 	settingsLevel = 0; //default settings level are 0, becouse settings are turned off by default
