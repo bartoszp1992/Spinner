@@ -79,9 +79,10 @@
  *todo:
  *shaky screen- caused by matrixWriteTime(); Move this function to TIM2 interrupt.
  *counting columnTime is not enough presice. Where's the problem?
- *ADD ADC, temperature and battery state measurement
+ *add temperature measurement
  *make secure- second hour digit must be set to - when first was set above 0.
-
+ *hour will be reset at clock settings.
+ *too short hour pointer between 0 and 1.
 
  *short pointer at 00:00
 
