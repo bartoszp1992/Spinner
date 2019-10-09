@@ -1,10 +1,11 @@
-PCB SYNCHRO 2 v0.2 5.
+PCB SYNCHRO 2 v0.4 5.
 
 quantity value package cost
 
 caps:
 2 100n 0603 0.25 (piekarz)
 2 10p 0603 0.06 (piekarz)
+1 2.2u 0603 0.3 (piekarz)
 
 LEDs:
 7 red 0603 0.6 (piekarz)
@@ -14,18 +15,24 @@ connectors:
 
 motor:
 1 vent 30x30x6 20.50 (piekarz)
+alt:1 vent MF30060V1-1000U-G99 (tme)
+alt:1 vent MF30060V2-A99-A (avt)
 
 cells:
 2 lipo120mAh 12x25x5 10. (wolumen)
+
+magnets:
+2 neodym 10x15x1 1.
 
 transistors:
 1 IRLML0030TR SOT-23 2. (piekarz)
 
 resistors:
 1 15k 0603 0.06 (piekarz)
-1 470R 0603
+1 220R 0603
+2 47k 0603
 2 10k 0603
-7 220R 0603
+7 1k 0603
 
 switches:
 2 TS3605 3.9x6mm  0.4 (piekarz)
@@ -39,6 +46,9 @@ uCs:
 
 crystals:
 1 32.768kHz 2x6mm 1. (botland)
+
+watch strap:
+1 NATO 24mm 10.(timepol)
 
 SUM:
 ~68,84
