@@ -38,7 +38,7 @@ switches:
 2 TS3605 3.9x6mm  0.4 (piekarz)
 
 chips:
-1 TC1186 SOT-23-5 2. (AVT)
+1 TC1185-3.3VCT SOT-23-5 2. (AVT)
 1 SS311PT SOT-23-3 3. (piekarz)
 
 uCs:
