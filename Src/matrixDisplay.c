@@ -122,14 +122,14 @@ void matrixClearState() {
 void matrixWriteTime(uint8_t hour, uint8_t minute, uint8_t second,
 		uint8_t level) {
 
-	for (int i = 1; i <= 2; i++) {
+	for (uint8_t i = 1; i <= 2; i++) {
 		screenMatrix[i][second] = level;
 	}
-	for (int i = 2; i <= 6; i++) {
+	for (uint8_t i = 2; i <= 6; i++) {
 		screenMatrix[i][minute] = level;
 	}
 
-	for (int i = 4; i <= 6; i++) {
+	for (uint8_t i = 4; i <= 6; i++) {
 
 		screenMatrix[i][hour * 5 + (minute / 10)] = level; //clockwise
 		screenMatrix[i][hour * 5 + (minute / 10) + 1] = level;
@@ -140,14 +140,14 @@ void matrixWriteTime(uint8_t hour, uint8_t minute, uint8_t second,
 void matrixWriteMarkers() { //write hours markers to matrix
 
 	//every 5 minutes
-	for (int i = 0; i <= 55; i = i + 5) {
+	for (uint8_t i = 0; i <= 55; i = i + 5) {
 
 		screenMatrix[0][i] = 1;
 
 	}
 
 	//every 3 hours
-	for (int i = 0; i <= 55; i = i + 15) {
+	for (uint8_t i = 0; i <= 55; i = i + 15) {
 
 		screenMatrix[1][i] = 1;
 
