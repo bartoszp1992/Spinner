@@ -55,9 +55,10 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
 //sync interrupts- every second
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 
-	if (htim->Instance == TIM2) {//each second
+	if (htim->Instance == TIM2) { //each second
 
-		if(batteryState<10) forceMode = 0;
+		if (batteryState < 10)
+			forceMode = 0;
 
 		//column time measurement
 		rpt = rotatesCounter;
@@ -66,7 +67,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 			rotateTime = (1000000 / rpt);
 			columnTime = (rotateTime / 60);
 
-			if (mode == 1) {//increment weak Counter only in running mode
+			if (mode == 1) { //increment weak Counter only in running mode
 				weakCounter++; //if rpt < normal, start counting weakTime
 				if (weakCounter > weakTime) {
 					mode = 0;
@@ -81,9 +82,9 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 
 		//counting running time(1 - display mode)
 		if (workingCounter < workingTime) {
-			if (forceMode == 0)
+			if (forceMode == 0 || mode == 2)
 				workingCounter++;
-			//^increment working counter only in ondemand mode
+			//^increment working counter only if forceMode are off, or if forcemode is on and
 		} else {
 			mode = 0;
 			//^if counts to working time, turns on mode 0 - stop mode.
@@ -105,15 +106,14 @@ void delayUs(uint32_t delay) {
 		;
 }
 
-
-void matrixWriteState(){
-	for(int i = 0; i<batteryState; i++){
+void matrixWriteState() {
+	for (int i = 0; i < batteryState; i++) {
 		screenMatrix[6][i] = 1;
 	}
 }
 
-void matrixClearState(){
-	for(int i = 0; i<60; i++){
+void matrixClearState() {
+	for (int i = 0; i < 60; i++) {
 		screenMatrix[6][i] = 0;
 	}
 }
@@ -157,6 +157,14 @@ void matrixWriteMarkers() { //write hours markers to matrix
 //displaying matrix
 void matrixDisplayCcw() {
 	if (startFlag == 1) {
+
+		getTime();
+
+		matrixWriteMarkers();
+		matrixWriteTime(hours, minutes, seconds, 1);
+		adcRead();
+		matrixWriteState();
+
 		startFlag = 0;
 
 		ALL_OFF
@@ -184,13 +192,14 @@ void matrixDisplayCcw() {
 			; //turn off all LEDs
 
 		} //end for
+
+		matrixWriteTime(hours, minutes, seconds, 0); //reload full array takes too log time
+		matrixClearState();
 	} else {
 		columnTime++;
 		//^if startFlag isn't on instantly after display cycle means that column time are too short.
 	}
 } //end function
-
-
 
 void matrixSplash(uint16_t delay) {
 

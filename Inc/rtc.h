@@ -19,5 +19,6 @@ volatile uint32_t subseconds;
 void getTime(void);
 void setTime(void);
 
+void clockSetting(void);
 
 #endif
