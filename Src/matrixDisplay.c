@@ -4,7 +4,7 @@
 #include "adc.h"
 
 void matrixDisplayInit(void) {
-	workingTime = 15; //TIM2 cycles. time of watch spinning or run in settings mode/20
+	workingTime = 12; //TIM2 cycles. time of watch spinning or run in settings mode/20
 
 	workingCounter = workingTime; //sleep mode as default. When equals, sync interrupt turns on mode 0(stop mode)
 	mode = 0; //sleep mode as default. As a supplement to ^. Becouse these variables are dependent.
@@ -100,7 +100,8 @@ void delayUs(uint32_t delay) {
 	if (delay > 200000)
 		delay = 0;
 
-	volatile uint32_t delayUs = delay * 0.5;
+	//volatile uint32_t delayUs = delay * 0.22;
+	volatile uint32_t delayUs = delay / 4;
 
 	for (uint32_t i = 0; i < delayUs; i++)
 		;
