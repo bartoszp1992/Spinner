@@ -81,6 +81,9 @@
  *			clock setting is now function, defined in rtc.h
  *			fixed working time in settings mode if force are active.
  *
+ *v1.1
+ *			corrections of working time, weak time, and min rpt.
+ *
  *todo:
  *shaky screen- caused by matrixWriteTime(); Move this function to TIM2 interrupt.
  *counting columnTime is not enough presice. Where's the problem?

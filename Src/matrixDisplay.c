@@ -4,15 +4,15 @@
 #include "adc.h"
 
 void matrixDisplayInit(void) {
-	workingTime = 20; //TIM2 cycles. time of watch spinning or run in settings mode
+	workingTime = 15; //TIM2 cycles. time of watch spinning or run in settings mode/20
 
 	workingCounter = workingTime; //sleep mode as default. When equals, sync interrupt turns on mode 0(stop mode)
 	mode = 0; //sleep mode as default. As a supplement to ^. Becouse these variables are dependent.
 
 	weakCounter = 0;
-	weakTime = 8;
+	weakTime = 4;//8
 
-	minRpt = 20; //minimum rotating speed- turns on time showing if reached.
+	minRpt = 10; //minimum rotating speed- turns on time showing if reached.//20
 	settingsLevel = 0; //default settings level are 0, becouse settings are turned off by default
 	contacts = 200; //switches contacts vibrations
 
