@@ -12,6 +12,7 @@ void matrixDisplayInit(void) {
 	weakCounter = 0;
 	weakTime = 4;//8
 
+
 	minRpt = 10; //minimum rotating speed- turns on time showing if reached.//20
 	settingsLevel = 0; //default settings level are 0, becouse settings are turned off by default
 	contacts = 200; //switches contacts vibrations
@@ -100,8 +101,8 @@ void delayUs(uint32_t delay) {
 	if (delay > 200000)
 		delay = 0;
 
-	//volatile uint32_t delayUs = delay * 0.22;
-	volatile uint32_t delayUs = delay / 4;
+	volatile uint32_t delayUs = delay * 0.36;
+	//volatile uint32_t delayUs = delay / 9;
 
 	for (uint32_t i = 0; i < delayUs; i++)
 		;
@@ -181,8 +182,8 @@ void matrixDisplayCcw() {
 				} //end if
 				if (startFlag == 1) { //if EXTI occurs
 
-					columnTime--; //decrease columnTime- means, that columnTime is too long.
-					columnTime--;
+					//columnTime--; //decrease columnTime- means, that columnTime is too long.
+					columnTime = columnTime - 100 / rpt;
 					break; //and exit loop. Will be started in next run.
 				}
 				delayUs(columnTime);
