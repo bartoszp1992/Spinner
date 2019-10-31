@@ -110,7 +110,7 @@
   (gr_line (start 218.33 64.15) (end 218.33 54.15) (layer F.SilkS) (width 0.12))
   (gr_line (start 203.33 64.15) (end 218.33 64.15) (layer F.SilkS) (width 0.12))
   (gr_line (start 203.33 54.15) (end 203.33 64.15) (layer F.SilkS) (width 0.12))
-  (gr_circle (center 216.53 73.47) (end 223.52 77.78) (layer F.SilkS) (width 0.12))
+  (gr_circle (center 216.53 73.47) (end 225.43 73.47) (layer F.SilkS) (width 0.12))
   (gr_line (start 233.03 84.77) (end 233.03 92.47) (layer Edge.Cuts) (width 0.05) (tstamp 5DA1A1A5))
   (gr_arc (start 238.82 73.47) (end 233.03 62.17) (angle -125.7397604) (layer Edge.Cuts) (width 0.05) (tstamp 5DA1A174))
   (gr_line (start 200.03 92.47) (end 200.03 84.77) (layer Edge.Cuts) (width 0.05) (tstamp 5DA1A156))
