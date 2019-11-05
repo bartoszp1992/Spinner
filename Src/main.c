@@ -87,6 +87,7 @@
  *v1.2
  *			dynamic correction of columnTime, faster than lower rpt
  *
+ * test
  *todo:
  *shaky screen- caused by matrixWriteTime(); Move this function to TIM2 interrupt.
  *counting columnTime is not enough presice. Where's the problem?
