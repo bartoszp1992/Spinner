@@ -15,7 +15,7 @@
  *                        opensource.org/licenses/BSD-3-Clause
  *
  ******************************************************************************
- * Bart's phantom watch vMilestone1
+ * Bart's Phantom
  *
  * PA1- added function for testing display, functions in separated file
  * PA2- more code comments, added function for display pointers
@@ -94,8 +94,6 @@
  *make secure- second hour digit must be set to - when first was set above 0.
  *hour will be reset at clock settings.
  *too short hour pointer between 0 and 1.
-
- *short pointer at 00:00
 
  currents:
  stop mode- 64uA

@@ -8,15 +8,15 @@ caps:
 1 2.2u 0603 0.3 (piekarz)
 
 LEDs:
-7 red 0603 0.6 (piekarz)
+6 green 0603 0.6 (piekarz)
+1 blue 0603 0.6 (piekarz)
 
 connectors:
 1 PinHeader1x2 2.54mm 0.06 (piekarz)
 
 motor:
-1 vent 30x30x6 20.50 (piekarz)
-alt:1 vent MF30060V1-1000U-G99 (tme)
-alt:1 vent MF30060V2-A99-A (avt)
+1 vent_0.56W MC30060V1-000U-G99 20.50 (piekarz- stosowany w prototypie)
+1 vent_0.44W MC30060V2-1000U-A99 20.50 (avt- pierwszy egzemplarz z serii)
 
 cells:
 2 lipo120mAh 12x25x5 10. (wolumen)
@@ -33,6 +33,7 @@ resistors:
 2 47k 0603
 2 10k 0603
 7 1k 0603
+1 300R 0603 (charger)
 
 switches:
 2 TS3605 3.9x6mm  0.4 (piekarz)
@@ -49,6 +50,9 @@ crystals:
 
 watch strap:
 1 NATO 24mm 10.(timepol)
+
+charger
+1 TP4056 3.(dareltek)
 
 SUM:
 ~68,84
