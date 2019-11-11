@@ -19,7 +19,7 @@ motor:
 1 vent_0.44W MC30060V2-1000U-A99 20.50 (avt- pierwszy egzemplarz z serii)
 
 cells:
-2 lipo120mAh 12x25x5 10. (wolumen)
+2 GSP051230_120mAh_0.44Wh_3.7V 12x25x5 10. (wolumen)
 
 magnets:
 2 neodym 10x15x1 1.
