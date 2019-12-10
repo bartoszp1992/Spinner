@@ -33,7 +33,7 @@ resistors:
 2 47k 0603
 2 10k 0603
 7 1k 0603
-1 300R 0603 (charger)
+1 5k 0603 (charger)
 
 switches:
 2 TS3605 3.9x6mm  0.4 (piekarz)
