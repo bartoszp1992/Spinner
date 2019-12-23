@@ -54,5 +54,14 @@ watch strap:
 charger
 1 TP4056 3.(dareltek)
 
+charger connector
+1 pinHeader 2.54mm female
+
+base
+1 3d printed base
+
+glue:
+hotglue 0.5
+
 SUM:
 ~68,84
