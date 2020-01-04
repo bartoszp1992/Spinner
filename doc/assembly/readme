@@ -1,1 +1,44 @@
 Remember about changing the resistor on charger to 5k.
+
+od razu CI tutaj rozrysuję pewne wskazórki odnośnie mechanicznego montażu.
+z\egarek jest sklejany na hotglue
+będzie Ci potrzebna zapalniczka i mocna suszarka, jeżeli nie masz hotair.
+po zmontowaniu płytki należy przykleić silnik do płytki.
+silnik musisz opierdolić z łopat i obudowy, najlepiej cążkami
+i odkleić tą nakleję z mocą.
+silnik rozgrzej porządnie suszarką, a następnie podgrzany zapalniczka klej kapnij tu, gdzie była naklejka. Musi być dość rzadki.
+przyklej naklejkę z powrotem.
+i dociśnij czymś płaskim, najlepiej plastikowym
+potem nałóż klej na zewnąrz naklejki
+podgrzej porządnie płytkę suszarką(ważne)
+i dopiero dociśnij silnik do płytki, nakleją w stronę płytki.
+uważaj, żeby przewody silnika były nieopodal padów MOTOR n apłytce.
+kolejna rzecz to montaż akumulatoróœ
+trzeba je opierdeolić z tych papierowych naklejek
+potem opcjonalnie oklej je carbonem
+ale jeżeli będziesz je oklejał, pamiętaj o zostawieniu nagiej folii od strony montażu do płytki.
+żeby klej trzymał za akumulator, a nie za okleiną.
+tym razem musisz porzadnie rozgrzać aku(do jakichś 60 stopni) suszarką
+i również płytkie
+i dopiero nałóż klej i dociśnij, symetrycznie w obrysy na płytce.
+jeden z akumulatorów lutujesz do padów CELL
+drugi z przeciwnej strony, + do MOTOR, - musisz odrapać kawałek soldermaski.
+ma to wyglądać tak
+kolejna rzecz to magnesy
+nalezy je rozgrzać suszarką i przykleić do podstawki, w ten sposób
+ważne, żeby były w odwrotnej polaryzacji
+jeden S do góry, drugi N do góry.
+podstawka jest symetryczna, więc bez różnicy jak na dole a jak na górze.
+oby odwrotnie.
+no i ostatni krok to przyklejenie silnika do podstawki.
+na tym etapie najlepiej sprawdzić, czy płytka jest sprawna
+wybudzić do pryzciskiem wake.
+jeżeli diody świecą a silnik się kręci, można kleić do podstawki.
+no i potem tylko zawlec pasek i wsio.
+zajmuje to ok 4h / zegarek.
+jeżeli będzie bicie,  można wyważyć
+wystarczy podgrzać płytkę dośc mocno i przesunąć ją na silniku.
+i trzeba zwracać uwage, żeby akumulatory nie zaczepiały o silnik
+trzeba zrobić prześwit ok 0.5mm
+jeżeli będzie ocierać, aku też można poprawić rozgrzewając płytkę suszarką.
+procesory są zaprogramowane.
