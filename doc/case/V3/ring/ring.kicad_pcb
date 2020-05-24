@@ -189,7 +189,7 @@
   (gr_line (start 156.018001 80.670001) (end 154.611117 76.847168) (layer Edge.Cuts) (width 0.05) (tstamp 5EC8E22B))
   (gr_arc (start 169.418 102.87) (end 188.5945 85.41758) (angle 84.60916232) (layer Edge.Cuts) (width 0.05) (tstamp 5EC8E229))
   (gr_line (start 182.817999 125.069999) (end 184.224883 128.892832) (layer Edge.Cuts) (width 0.05) (tstamp 5EC8E228))
-  (gr_circle (center 169.418 102.87) (end 169.418 82.554622) (layer Edge.Cuts) (width 0.05) (tstamp 5EC8E225))
+  (gr_circle (center 169.418 102.87) (end 187.418 102.87) (layer Edge.Cuts) (width 0.05) (tstamp 5EC8E225))
   (gr_line (start 156.029884 125.077167) (end 154.623 128.9) (layer Edge.Cuts) (width 0.05) (tstamp 5EC8E224))
   (gr_arc (start 169.418 102.87) (end 182.817999 125.069999) (angle 62.2) (layer Edge.Cuts) (width 0.05) (tstamp 5EC8E223))
   (gr_arc (start 169.418 102.87) (end 156.018001 80.670001) (angle 62.2) (layer Edge.Cuts) (width 0.05) (tstamp 5EC8E220))
