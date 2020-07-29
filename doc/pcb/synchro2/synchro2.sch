@@ -15,10 +15,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L MCU_ST_STM32F0:STM32F030F4Px U2
+L MCU_ST_STM32F0:STM32F030F4Px Core1
 U 1 1 5D5DBD75
 P 6100 3550
-F 0 "U2" H 6250 2800 50  0000 C CNN
+F 0 "Core1" H 6250 2800 50  0000 C CNN
 F 1 "STM32F041F6Px" H 6500 2700 50  0000 C CNN
 F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 5700 2850 50  0001 R CNN
 F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00088500.pdf" H 6100 3550 50  0001 C CNN
@@ -26,10 +26,10 @@ F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/da
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Crystal Y1
+L Device:Crystal Quartz1
 U 1 1 5D5DC690
 P 4900 4000
-F 0 "Y1" V 4854 4131 50  0000 L CNN
+F 0 "Quartz1" V 4854 4131 50  0000 L CNN
 F 1 "32.768" V 4945 4131 50  0000 L CNN
 F 2 "Crystal:Crystal_DS26_D2.0mm_L6.0mm_Horizontal" H 4900 4000 50  0001 C CNN
 F 3 "~" H 4900 4000 50  0001 C CNN
@@ -168,10 +168,10 @@ Connection ~ 6100 2650
 Wire Wire Line
 	6600 3050 6650 3050
 $Comp
-L Switch:SW_SPST SW2
+L Switch:SW_SPST SET1
 U 1 1 5D5F190F
 P 6800 3450
-F 0 "SW2" H 6950 3350 50  0000 C CNN
+F 0 "SET1" H 6950 3350 50  0000 C CNN
 F 1 "SET" H 7150 3350 50  0000 C CNN
 F 2 "Button_Switch_SMD:SW_SPST_CK_RS282G05A3" H 6800 3450 50  0001 C CNN
 F 3 "~" H 6800 3450 50  0001 C CNN
@@ -179,11 +179,11 @@ F 3 "~" H 6800 3450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_SPST SW1
+L Switch:SW_SPST WAKE1
 U 1 1 5D5F14F3
 P 6800 3350
-F 0 "SW1" H 6950 3400 50  0000 C CNN
-F 1 "WAKE" H 7100 3400 50  0000 C CNN
+F 0 "WAKE1" H 6950 3400 50  0000 C CNN
+F 1 "WAKE" H 7200 3400 50  0000 C CNN
 F 2 "Button_Switch_SMD:SW_SPST_CK_RS282G05A3" H 6800 3350 50  0001 C CNN
 F 3 "~" H 6800 3350 50  0001 C CNN
 	1    6800 3350
@@ -454,7 +454,7 @@ U 1 1 5D63567B
 P 1700 2500
 F 0 "BT1" H 1818 2596 50  0000 L CNN
 F 1 "Battery_Cell" H 1818 2505 50  0000 L CNN
-F 2 "Battery:BatteryHolder_Keystone_1060_1x2032" V 1700 2560 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 1700 2560 50  0001 C CNN
 F 3 "~" V 1700 2560 50  0001 C CNN
 	1    1700 2500
 	1    0    0    -1  
@@ -534,27 +534,15 @@ $EndComp
 $Comp
 L Connector:Conn_01x02_Female J1
 U 1 1 5D6C8721
-P 1000 2500
-F 0 "J1" H 892 2175 50  0000 C CNN
-F 1 "Charging port" H 892 2266 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal" H 1000 2500 50  0001 C CNN
-F 3 "~" H 1000 2500 50  0001 C CNN
-	1    1000 2500
+P 800 2400
+F 0 "J1" H 692 2075 50  0000 C CNN
+F 1 "Charging port" H 692 2166 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal" H 800 2400 50  0001 C CNN
+F 3 "~" H 800 2400 50  0001 C CNN
+	1    800  2400
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	1200 2400 1500 2400
-Wire Wire Line
-	1500 2400 1500 2300
-Wire Wire Line
-	1500 2300 1700 2300
 Connection ~ 1700 2300
-Wire Wire Line
-	1200 2500 1500 2500
-Wire Wire Line
-	1500 2500 1500 2600
-Wire Wire Line
-	1500 2600 1700 2600
 Connection ~ 1700 2600
 Wire Wire Line
 	3150 2400 2900 2400
@@ -678,7 +666,7 @@ U 1 1 5D70604F
 P 10100 3550
 F 0 "M1" H 10258 3546 50  0000 L CNN
 F 1 "Motor_DC" H 10258 3455 50  0000 L CNN
-F 2 "LED_SMD:LED_2816_7142Metric" H 10100 3460 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" H 10100 3460 50  0001 C CNN
 F 3 "~" H 10100 3460 50  0001 C CNN
 	1    10100 3550
 	1    0    0    -1  
@@ -704,26 +692,6 @@ Wire Wire Line
 	7150 2650 7150 3050
 Connection ~ 7150 3050
 NoConn ~ 6600 3250
-Wire Wire Line
-	1700 2600 2000 2600
-Wire Wire Line
-	1700 2300 2100 2300
-$Comp
-L Connector:Conn_01x02_Female J2
-U 1 1 5D75A7C0
-P 2100 2800
-F 0 "J2" V 2150 2650 50  0000 L CNN
-F 1 "Cell pad" V 2250 2650 50  0000 L CNN
-F 2 "LED_SMD:LED_2512_6332Metric_Pad1.52x3.35mm_HandSolder" H 2100 2800 50  0001 C CNN
-F 3 "~" H 2100 2800 50  0001 C CNN
-	1    2100 2800
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2100 2600 2100 2300
-Connection ~ 2100 2300
-Wire Wire Line
-	2100 2300 2550 2300
 $Comp
 L Sensor_Magnetic:A1104LLHL U4
 U 1 1 5D84C99C
@@ -835,4 +803,63 @@ VBAT
 Wire Wire Line
 	3250 3900 2850 3900
 Connection ~ 2850 3900
+Wire Wire Line
+	1700 2300 2550 2300
+$Comp
+L Device:Battery_Cell BT2
+U 1 1 5F2187A1
+P 1450 2500
+F 0 "BT2" H 1250 2950 50  0000 L CNN
+F 1 "Battery_Cell" H 1200 2800 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 1450 2560 50  0001 C CNN
+F 3 "~" V 1450 2560 50  0001 C CNN
+	1    1450 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 2300 1450 2300
+Wire Wire Line
+	1450 2300 1700 2300
+Connection ~ 1450 2300
+Wire Wire Line
+	1000 2400 1000 2600
+Wire Wire Line
+	1000 2600 1450 2600
+Wire Wire Line
+	1450 2600 1700 2600
+Connection ~ 1450 2600
+$Comp
+L Connector:Conn_01x05_Female J2
+U 1 1 5F22F900
+P 5550 1300
+F 0 "J2" H 5578 1326 50  0000 L CNN
+F 1 "programming" H 5578 1235 50  0000 L CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x05_P1.27mm_Vertical" H 5550 1300 50  0001 C CNN
+F 3 "~" H 5550 1300 50  0001 C CNN
+	1    5550 1300
+	1    0    0    -1  
+$EndComp
+Text GLabel 5350 1100 0    50   Input ~ 0
+Vcc
+Text GLabel 5350 1200 0    50   Input ~ 0
+CLK
+Text GLabel 5350 1400 0    50   Input ~ 0
+DIO
+Text GLabel 5350 1500 0    50   Input ~ 0
+RST
+$Comp
+L power:GND #PWR03
+U 1 1 5F231D73
+P 4950 1400
+F 0 "#PWR03" H 4950 1150 50  0001 C CNN
+F 1 "GND" H 4955 1227 50  0000 C CNN
+F 2 "" H 4950 1400 50  0001 C CNN
+F 3 "" H 4950 1400 50  0001 C CNN
+	1    4950 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 1400 4950 1300
+Wire Wire Line
+	4950 1300 5350 1300
 $EndSCHEMATC
