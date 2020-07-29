@@ -422,6 +422,6 @@
   (gr_circle (center 169.418 102.87) (end 187.418 102.87) (layer Edge.Cuts) (width 0.05) (tstamp 5EC8E225))
   (gr_arc (start 169.418 102.87) (end 181.97 125.56) (angle 57.91391902) (layer Edge.Cuts) (width 0.05) (tstamp 5EC8E223))
   (gr_arc (start 169.418 102.87) (end 156.87 80.17) (angle 57.87320241) (layer Edge.Cuts) (width 0.05) (tstamp 5EC8E220))
-  (gr_circle (center 169.418 102.87) (end 169.26814 102.82682) (layer B.SilkS) (width 0.12) (tstamp 5EC8E21E))
+  (gr_circle (center 169.418 102.87) (end 169.573957 102.87) (layer Cmts.User) (width 0.12) (tstamp 5EC8E21E))
 
 )

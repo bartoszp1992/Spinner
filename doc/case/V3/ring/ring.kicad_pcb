@@ -1,8 +1,8 @@
-(kicad_pcb (version 20171130) (host pcbnew "(5.1.4)-1")
+(kicad_pcb (version 20171130) (host pcbnew 5.1.4-1.fc30)
 
   (general
     (thickness 1.6)
-    (drawings 172)
+    (drawings 171)
     (tracks 0)
     (zones 0)
     (modules 0)
@@ -101,14 +101,11 @@
     (uvia_drill 0.1)
   )
 
-  (gr_text "Designed\n  by Bart" (at 171.91736 83.9089) (layer F.SilkS)
-    (effects (font (size 0.5 0.5) (thickness 0.1)))
-  )
-  (gr_text Mk5 (at 166.39794 84.0486) (layer F.SilkS)
+  (gr_text Mk5 (at 169.418 122.174) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
   (gr_circle (center 169.418 102.87) (end 194.357647 102.87) (layer F.SilkS) (width 0.15) (tstamp 5F2186C7))
-  (gr_text SynChro (at 169.4053 81.37652) (layer F.SilkS)
+  (gr_text SynChro (at 169.418 81.026) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)))
   )
   (gr_text I (at 147.04822 102.85984 90) (layer F.SilkS) (tstamp 5F21863B)
