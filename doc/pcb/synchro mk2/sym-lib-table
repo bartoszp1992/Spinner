@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name sense-rescue)(type Legacy)(uri /home/bartosz/projekty/arm/Tacho2/doc/pcb/sense/sense-rescue.lib)(options "")(descr ""))
+)

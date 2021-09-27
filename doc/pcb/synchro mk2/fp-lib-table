@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "synchro mk2")(type KiCad)(uri "${KIPRJMOD}/synchro mk2.pretty")(options "")(descr ""))
+)
